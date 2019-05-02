@@ -4,7 +4,9 @@ import geopandas as gpd
 import pysal as ps
 import matplotlib.pyplot as plt
 import seaborn as sns
+import pysal
 
+pysal.explore.pointpats.
 
 def column_kde(series_to_plot, num_bins=7, split_type="quantiles", bw=0.15,
                plot_title="", xlabel="x", ylabel="y"):
