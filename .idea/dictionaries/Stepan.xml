@@ -6,9 +6,14 @@
       <w>coef</w>
       <w>daid</w>
       <w>dissimination</w>
+      <w>ellps</w>
+      <w>gtha</w>
       <w>jenks</w>
+      <w>latlong</w>
       <w>maxx</w>
+      <w>neis</w>
       <w>objectid</w>
+      <w>proj</w>
       <w>quantiles</w>
       <w>rugplot</w>
       <w>shapefile</w>

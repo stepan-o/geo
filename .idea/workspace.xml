@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5aed1f9f-a015-41c3-b5bc-34e5cc998b52" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/my_functions_geo.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_functions_geo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new_workflow.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/new_workflow.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Stepan.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Stepan.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,22 +19,41 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Teranet_GTHA_DA_spatial_join.ipynb">
+          <provider selected="true" editor-type-id="jupyter-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Teranet_GTHA_DA_investigating_pins.ipynb">
           <provider selected="true" editor-type-id="jupyter-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/new_workflow.ipynb">
+        <entry file="file://$PROJECT_DIR$/parking_Toronto.ipynb">
           <provider selected="true" editor-type-id="jupyter-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/new_workflow.ipynb">
+          <provider selected="true" editor-type-id="jupyter-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/my_functions_geo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+            <state relative-caret-position="2208">
+              <caret line="99" column="54" selection-start-line="99" selection-start-column="54" selection-end-line="99" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/geo_doodle.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="10" column="49" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
               <folding>
-                <element signature="e#0#18#0" expanded="true" />
+                <element signature="e#4#20#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -45,8 +64,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Jupyter Notebook" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -58,6 +77,7 @@
       <list>
         <option value="$PROJECT_DIR$/my_functions.py" />
         <option value="$PROJECT_DIR$/new_workflow.ipynb" />
+        <option value="$PROJECT_DIR$/geo_doodle.py" />
         <option value="$PROJECT_DIR$/my_functions_geo.py" />
       </list>
     </option>
@@ -87,6 +107,12 @@
               <item name="geo" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="geo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="geo" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="python_geospatial_development_westra" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -96,7 +122,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="C:/Anaconda3/envs/gds" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -151,6 +177,11 @@
       <workItem from="1556210771006" duration="5740000" />
       <workItem from="1556223027424" duration="1294000" />
       <workItem from="1556238685510" duration="8020000" />
+      <workItem from="1556776477581" duration="33000" />
+      <workItem from="1557445018957" duration="3099000" />
+      <workItem from="1557980145105" duration="1498000" />
+      <workItem from="1557981686681" duration="579000" />
+      <workItem from="1557983505596" duration="6837000" />
     </task>
     <task id="LOCAL-00001" summary="started new workflow">
       <created>1556254212785</created>
@@ -173,24 +204,58 @@
       <option name="project" value="LOCAL" />
       <updated>1556254361667</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added weight matrices">
+      <created>1557986904748</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1557986904748</updated>
+    </task>
+    <task id="LOCAL-00005" summary="based on Python Spatial Analysis book">
+      <created>1558020832207</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1558020832207</updated>
+    </task>
+    <task id="LOCAL-00006" summary="user defined functions">
+      <created>1558020873683</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1558020873683</updated>
+    </task>
+    <task id="LOCAL-00007" summary="spatial weights for Toronto DAs">
+      <created>1558020910430</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1558020910430</updated>
+    </task>
+    <task id="LOCAL-00008" summary="workflow to join Teranet data to DA geometry">
+      <created>1558020990136</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1558020990136</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15054000" />
+    <option name="totallyTimeSpent" value="27100000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1536" height="864" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22989276" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24664879" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39974293" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -198,17 +263,18 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32904884" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info active="true" anchor="bottom" id="Jupyter" order="11" visible="true" weight="0.32904884" />
+      <window_info anchor="bottom" id="Jupyter" order="11" visible="true" weight="0.32904884" />
       <window_info anchor="bottom" id="Terminal" order="12" weight="0.32904884" />
       <window_info anchor="bottom" id="Python Console" order="13" weight="0.32904884" />
-      <window_info anchor="right" x="0" y="0" width="334" height="664" id="Documentation" side_tool="true" weight="0.3297587" />
+      <window_info anchor="bottom" id="Messages" order="14" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.3297587" />
       <window_info anchor="right" id="R Graphics" order="4" />
       <window_info anchor="right" id="R Packages" order="5" />
       <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" x="0" y="0" width="334" height="664" id="Documentation" order="7" side_tool="true" weight="0.3297587" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,30 +284,46 @@
     <MESSAGE value="started new workflow" />
     <MESSAGE value="collection of geodata-related functions" />
     <MESSAGE value="generated by pycharm" />
-    <option name="LAST_COMMIT_MESSAGE" value="generated by pycharm" />
+    <MESSAGE value="added weight matrices" />
+    <MESSAGE value="based on Python Spatial Analysis book" />
+    <MESSAGE value="user defined functions" />
+    <MESSAGE value="spatial weights for Toronto DAs" />
+    <MESSAGE value="workflow to join Teranet data to DA geometry" />
+    <option name="LAST_COMMIT_MESSAGE" value="workflow to join Teranet data to DA geometry" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Teranet_GTHA_DA_workflow.ipynb">
-      <provider selected="true" editor-type-id="jupyter-editor" />
+    <entry file="file://$PROJECT_DIR$/my_functions.py" />
+    <entry file="file://$PROJECT_DIR$/my_functions_geo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2208">
+          <caret line="99" column="54" selection-start-line="99" selection-start-column="54" selection-end-line="99" selection-end-column="54" />
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my_functions.py">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/geo_doodle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="10" column="49" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
+          <folding>
+            <element signature="e#4#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Teranet_GTHA_DA_investigating_pins.ipynb">
       <provider selected="true" editor-type-id="jupyter-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/new_workflow.ipynb">
+    <entry file="file://$PROJECT_DIR$/parking_Toronto.ipynb">
       <provider selected="true" editor-type-id="jupyter-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/my_functions_geo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/Teranet_GTHA_DA_workflow.ipynb">
+      <provider selected="true" editor-type-id="jupyter-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Teranet_GTHA_DA_spatial_join.ipynb">
+      <provider selected="true" editor-type-id="jupyter-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new_workflow.ipynb">
+      <provider selected="true" editor-type-id="jupyter-editor" />
     </entry>
   </component>
 </project>
