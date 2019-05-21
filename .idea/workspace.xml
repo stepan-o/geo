@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5aed1f9f-a015-41c3-b5bc-34e5cc998b52" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Stepan.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Stepan.xml" afterDir="false" />
+    <list default="true" id="49140d37-a20a-4d23-887b-bfdbe0dc31a8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new_workflow.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/new_workflow.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,82 +13,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Teranet_GTHA_DA_workflow.ipynb">
-          <provider selected="true" editor-type-id="jupyter-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Teranet_GTHA_DA_spatial_join.ipynb">
-          <provider selected="true" editor-type-id="jupyter-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Teranet_GTHA_DA_investigating_pins.ipynb">
-          <provider selected="true" editor-type-id="jupyter-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/parking_Toronto.ipynb">
-          <provider selected="true" editor-type-id="jupyter-editor" />
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/new_workflow.ipynb">
           <provider selected="true" editor-type-id="jupyter-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/my_functions_geo.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2208">
-              <caret line="99" column="54" selection-start-line="99" selection-start-column="54" selection-end-line="99" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/geo_doodle.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="10" column="49" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
-              <folding>
-                <element signature="e#4#20#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Jupyter Notebook" />
-        <option value="Python Script" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/my_functions.py" />
-        <option value="$PROJECT_DIR$/new_workflow.ipynb" />
-        <option value="$PROJECT_DIR$/geo_doodle.py" />
-        <option value="$PROJECT_DIR$/my_functions_geo.py" />
-      </list>
-    </option>
-  </component>
   <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
-    <option name="x" value="40" />
-    <option name="y" value="25" />
-    <option name="width" value="1750" />
-    <option name="height" value="1030" />
+    <option name="x" value="10" />
+    <option name="y" value="20" />
+    <option name="width" value="1004" />
+    <option name="height" value="688" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -101,17 +41,6 @@
             <path>
               <item name="geo" type="b2602c69:ProjectViewProjectNode" />
               <item name="geo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="geo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="geo" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="geo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="geo" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="python_geospatial_development_westra" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -126,7 +55,7 @@
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.notebooks.jupyter.connections.configuration.JupyterServerConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -140,186 +69,80 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <module name="geo" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="5aed1f9f-a015-41c3-b5bc-34e5cc998b52" name="Default Changelist" comment="" />
-      <created>1556210725930</created>
+      <changelist id="49140d37-a20a-4d23-887b-bfdbe0dc31a8" name="Default Changelist" comment="" />
+      <created>1558021142543</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1556210725930</updated>
-      <workItem from="1556210771006" duration="5740000" />
-      <workItem from="1556223027424" duration="1294000" />
-      <workItem from="1556238685510" duration="8020000" />
-      <workItem from="1556776477581" duration="33000" />
-      <workItem from="1557445018957" duration="3099000" />
-      <workItem from="1557980145105" duration="1498000" />
-      <workItem from="1557981686681" duration="579000" />
-      <workItem from="1557983505596" duration="6837000" />
+      <updated>1558021142543</updated>
+      <workItem from="1558021147855" duration="62000" />
+      <workItem from="1558021695150" duration="5080000" />
+      <workItem from="1558044359795" duration="1525000" />
+      <workItem from="1558046106292" duration="361000" />
+      <workItem from="1558046848037" duration="1320000" />
+      <workItem from="1558048536110" duration="20000" />
+      <workItem from="1558048940266" duration="1606000" />
+      <workItem from="1558116361900" duration="2048000" />
+      <workItem from="1558125424158" duration="66000" />
+      <workItem from="1558217894384" duration="559000" />
+      <workItem from="1558218460279" duration="3300000" />
+      <workItem from="1558387706666" duration="3813000" />
+      <workItem from="1558391542227" duration="2657000" />
+      <workItem from="1558394322273" duration="163000" />
+      <workItem from="1558394529634" duration="112000" />
+      <workItem from="1558394979426" duration="1477000" />
+      <workItem from="1558403901262" duration="12000" />
+      <workItem from="1558404037408" duration="120000" />
+      <workItem from="1558404179565" duration="2547000" />
+      <workItem from="1558406742527" duration="1791000" />
+      <workItem from="1558408569810" duration="1400000" />
+      <workItem from="1558409983217" duration="152000" />
+      <workItem from="1558410180239" duration="631000" />
     </task>
-    <task id="LOCAL-00001" summary="started new workflow">
-      <created>1556254212785</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1556254212785</updated>
-    </task>
-    <task id="LOCAL-00002" summary="collection of geodata-related functions">
-      <created>1556254320082</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1556254320082</updated>
-    </task>
-    <task id="LOCAL-00003" summary="generated by pycharm">
-      <created>1556254361667</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1556254361667</updated>
-    </task>
-    <task id="LOCAL-00004" summary="added weight matrices">
-      <created>1557986904748</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1557986904748</updated>
-    </task>
-    <task id="LOCAL-00005" summary="based on Python Spatial Analysis book">
-      <created>1558020832207</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1558020832207</updated>
-    </task>
-    <task id="LOCAL-00006" summary="user defined functions">
-      <created>1558020873683</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1558020873683</updated>
-    </task>
-    <task id="LOCAL-00007" summary="spatial weights for Toronto DAs">
-      <created>1558020910430</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1558020910430</updated>
-    </task>
-    <task id="LOCAL-00008" summary="workflow to join Teranet data to DA geometry">
-      <created>1558020990136</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1558020990136</updated>
-    </task>
-    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27100000" />
+    <option name="totallyTimeSpent" value="31328000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1536" height="864" extended-state="6" />
+    <frame x="0" y="0" width="1024" height="768" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24664879" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.4010204" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39974293" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32904884" />
-      <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info anchor="bottom" id="Jupyter" order="11" visible="true" weight="0.32904884" />
-      <window_info anchor="bottom" id="Terminal" order="12" weight="0.32904884" />
-      <window_info anchor="bottom" id="Python Console" order="13" weight="0.32904884" />
-      <window_info anchor="bottom" id="Messages" order="14" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5020408" side_tool="true" weight="0.32991204" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.28152493" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="bottom" id="Jupyter" order="13" sideWeight="0.4979592" visible="true" weight="0.32991204" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" weight="0.3297587" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.5928571" />
       <window_info anchor="right" id="R Graphics" order="4" />
       <window_info anchor="right" id="R Packages" order="5" />
       <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="right" x="0" y="0" width="334" height="664" id="Documentation" order="7" side_tool="true" weight="0.3297587" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="started new workflow" />
-    <MESSAGE value="collection of geodata-related functions" />
-    <MESSAGE value="generated by pycharm" />
-    <MESSAGE value="added weight matrices" />
-    <MESSAGE value="based on Python Spatial Analysis book" />
-    <MESSAGE value="user defined functions" />
-    <MESSAGE value="spatial weights for Toronto DAs" />
-    <MESSAGE value="workflow to join Teranet data to DA geometry" />
-    <option name="LAST_COMMIT_MESSAGE" value="workflow to join Teranet data to DA geometry" />
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/my_functions.py" />
-    <entry file="file://$PROJECT_DIR$/my_functions_geo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2208">
-          <caret line="99" column="54" selection-start-line="99" selection-start-column="54" selection-end-line="99" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/geo_doodle.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="10" column="49" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
-          <folding>
-            <element signature="e#4#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Teranet_GTHA_DA_investigating_pins.ipynb">
-      <provider selected="true" editor-type-id="jupyter-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/parking_Toronto.ipynb">
-      <provider selected="true" editor-type-id="jupyter-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Teranet_GTHA_DA_workflow.ipynb">
-      <provider selected="true" editor-type-id="jupyter-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Teranet_GTHA_DA_spatial_join.ipynb">
       <provider selected="true" editor-type-id="jupyter-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/new_workflow.ipynb">
