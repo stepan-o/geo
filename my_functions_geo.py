@@ -8,6 +8,83 @@ import pysal
 import contextily as ctx
 
 
+def map_neighbours(gdf, wm, focus_id, focus_rad=0.025, geometry_col='geometry',
+                   plot_title='Neighbours',
+                   plot_buffer=False, buffer_rad=0, buffer_color='red', buffer_alpha=0.3,
+                   base_color='black', base_linewidth=0.1, base_alpha=1,
+                   focus_color='red', focus_linewidth=0, focus_alpha=1,
+                   neighs_color='lime', neighs_linewidth=0, neighs_alpha=1):
+    """
+    map focus polygon from a GeoDataFrame and its neighbourhood
+    :param buffer_alpha:
+    :param buffer_color:
+    :param buffer_rad:
+    :param plot_buffer:
+    :param plot_title:
+    :param neighs_alpha:
+    :param neighs_linewidth:
+    :param neighs_color:
+    :param focus_alpha:
+    :param focus_linewidth:
+    :param focus_color:
+    :param base_alpha:
+    :param base_linewidth:
+    :param base_color:
+    :param gdf: GeoDataFrame
+                GeoDataFrame with polygons of interest
+    :param wm:  PySal weight matrix
+                weight matrix generated in PySal for GeoDataFrame
+    :param focus_id: int or string
+                index of the polygon to highlight from the GeoDataFrame
+    :param focus_rad: float
+                zoom radius for the map
+    :param geometry_col: string
+                name of the geometry column in the GeoDataFrame
+    :return: None, plots a map
+    """
+    print(plot_title)
+    print("Number of observations",
+          wm.n)
+    print("Average number of neighbors",
+          wm.mean_neighbors)
+    print("Min number of neighbors",
+          wm.min_neighbors)
+    print("Max number of neighbors",
+          wm.max_neighbors)
+    print("No of islands (observations disconnected):",
+          len(wm.islands))
+    card = pd.Series(wm.cardinalities)
+    f, ax = plt.subplots(1)
+    sns.distplot(card, rug=True, bins=20)
+    ax.set_title("Distribution of cardinalities for " + plot_title)
+    plt.show()
+    # Setup figure
+    f, ax = plt.subplots(1, figsize=(6, 6))
+    # Plot base layer of polygons
+    gdf.plot(ax=ax, facecolor=base_color,
+             linewidth=base_linewidth, alpha=base_alpha)
+    # Select focal polygon
+    focus = gdf.loc[[focus_id], [geometry_col]]
+    # Plot focal polygon
+    focus.plot(facecolor=focus_color, linewidth=focus_linewidth,
+               alpha=focus_alpha, ax=ax)
+    if plot_buffer:
+        focus.centroid.plot(ax=ax)
+        focus.centroid.buffer(buffer_rad).plot(ax=ax,
+                                               color=buffer_color,
+                                               alpha=buffer_alpha)
+    # Plot neighbors
+    neis = gdf.loc[list(wm[focus_id].keys())]
+    neis.plot(ax=ax, facecolor=neighs_color,
+              linewidth=neighs_linewidth, alpha=neighs_alpha)
+    # Title
+    f.suptitle(plot_title + " of {0}".format(focus_id))
+    # Style and display on screen
+    ax.set_ylim(focus.centroid.y[0] - focus_rad, focus.centroid.y[0] + focus_rad)
+    ax.set_xlim(focus.centroid.x[0] - focus_rad, focus.centroid.x[0] + focus_rad)
+    plt.show()
+
+
 def column_kde(series_to_plot, num_bins=7, split_type="quantiles", bw=0.15,
                plot_title="", xlabel="x", ylabel="y"):
     """
