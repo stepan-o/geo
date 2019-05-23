@@ -8,6 +8,45 @@ import pysal
 import contextily as ctx
 
 
+def map_lisa(gdf, sgn_col='significant', quad_col='quadrant', plot_title="",
+             zoom=0, left_lim=0, bottom_lim=0):
+    """
+    map LISA quadrants from supplied GeoDataFrame
+    :param bottom_lim:
+    :param left_lim:
+    :param zoom:
+    :param plot_title:
+    :param gdf:
+    :param sgn_col:
+    :param quad_col:
+    :return:
+    """
+    # Setup the figure and axis
+    f, ax = plt.subplots(1, figsize=(9, 9))
+    # Plot insignificant clusters
+    ns = gdf.loc[gdf[sgn_col] == False, 'geometry']
+    ns.plot(ax=ax, color='k')
+    # Plot HH clusters
+    hh = gdf.loc[(gdf[quad_col] == 1) & (gdf[sgn_col] == True), 'geometry']
+    hh.plot(ax=ax, color='red')
+    # Plot LL clusters
+    ll = gdf.loc[(gdf[quad_col] == 3) & (gdf[sgn_col] == True), 'geometry']
+    ll.plot(ax=ax, color='blue')
+    # Plot LH clusters
+    lh = gdf.loc[(gdf[quad_col] == 2) & (gdf[sgn_col] == True), 'geometry']
+    lh.plot(ax=ax, color='#83cef4')
+    # Plot HL clusters
+    hl = gdf.loc[(gdf[quad_col] == 4) & (gdf[sgn_col] == True), 'geometry']
+    hl.plot(ax=ax, color='#e59696')
+    # Style and draw
+    f.suptitle('LISA' + plot_title, size=20)
+    f.set_facecolor('white')
+    if zoom:
+        ax.set_xlim(left_lim, left_lim + zoom)
+        ax.set_ylim(bottom_lim, bottom_lim + zoom)
+    plt.show()
+
+
 def column_kde(series_to_plot, num_bins=7, split_type="quantiles", bw=0.15,
                plot_title="", xlabel="x", ylabel="y"):
     """

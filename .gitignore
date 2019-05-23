@@ -2,3 +2,10 @@
 data/HHSaleHistory.csv
 data/HHSaleHistory_cleaned_v0.9.csv
 data/HHSaleHistory_cleaned_v0.9_GTHA_DA.csv
+data/Profile_of_Income_by_Dissemination_Area__Greater_Toronto_Area_2016_Census.geojson
+data/python_geospatial_development_westra/tl_2009_us_state.dbf
+data/python_geospatial_development_westra/tl_2009_us_state.prj
+data/python_geospatial_development_westra/tl_2009_us_state.shp
+data/python_geospatial_development_westra/tl_2009_us_state.shp.xml
+data/python_geospatial_development_westra/tl_2009_us_state.shx
+data/python_geospatial_development_westra/tl_2009_us_state.zip
