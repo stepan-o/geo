@@ -39,7 +39,7 @@ def map_lisa(gdf, sgn_col='significant', quad_col='quadrant', plot_title="",
     hl = gdf.loc[(gdf[quad_col] == 4) & (gdf[sgn_col] == True), 'geometry']
     hl.plot(ax=ax, color='#e59696')
     # Style and draw
-    f.suptitle('LISA' + plot_title, size=30)
+    f.suptitle('LISA' + plot_title, size=20)
     f.set_facecolor('white')
     if zoom:
         ax.set_xlim(left_lim, left_lim + zoom)

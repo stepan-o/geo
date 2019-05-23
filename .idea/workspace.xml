@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49140d37-a20a-4d23-887b-bfdbe0dc31a8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Administrator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/new_workflow-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/new_workflow-checkpoint.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my_functions_geo.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_functions_geo.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/new_workflow.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/new_workflow.ipynb" afterDir="false" />
     </list>
@@ -18,58 +18,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/new_workflow.ipynb">
-          <provider selected="true" editor-type-id="jupyter-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/my_functions_geo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="85" selection-start-line="10" selection-end-line="85" />
-              <folding>
-                <element signature="e#616#3090#0" />
-                <element signature="e#598#1459#1" />
-                <element signature="e#2514#2693#0" />
-                <element signature="e#311#3470#0" />
-                <element signature="e#311#1284#1" />
-                <element signature="e#1733#1876#0" />
-                <element signature="e#1895#2048#0" />
-                <element signature="e#3641#7313#0" />
-                <element signature="e#3641#5332#1" />
-                <element signature="e#5614#5985#0" />
-                <element signature="e#5654#5801#0" />
-                <element signature="e#5828#5985#0" />
-                <element signature="e#6455#6565#0" />
-                <element signature="e#7526#13071#0" />
-                <element signature="e#7526#9893#1" />
-                <element signature="e#9983#10031#0" />
-                <element signature="e#10555#10700#0" />
-                <element signature="e#11417#11462#0" />
-                <element signature="e#12748#13071#0" />
-                <element signature="e#13247#17131#0" />
-                <element signature="e#13247#15017#1" />
-                <element signature="e#15406#16051#0" />
-                <element signature="e#15700#15850#0" />
-                <element signature="e#16151#16798#0" />
-                <element signature="e#16445#16597#0" />
-                <element signature="e#17297#21754#0" />
-                <element signature="e#17297#19378#1" />
-                <element signature="e#20193#20265#0" />
-                <element signature="e#21475#21660#0" />
-                <element signature="e#21907#28371#0" />
-                <element signature="e#21907#25428#1" />
-                <element signature="e#25809#25861#0" />
-                <element signature="e#26781#27542#0" />
-                <element signature="e#26943#27221#0" />
-                <element signature="e#27563#28143#0" />
-                <element signature="e#27731#27941#0" />
-                <element signature="e#28171#28299#0" />
-                <element signature="e#28434#30495#0" />
-                <element signature="e#28434#29371#1" />
-                <element signature="e#30535#31353#0" />
-                <element signature="e#30535#30852#1" />
-              </folding>
+            <state relative-caret-position="782">
+              <caret line="41" column="42" selection-start-line="41" selection-start-column="42" selection-end-line="41" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -165,7 +117,7 @@
       <workItem from="1558408569810" duration="1400000" />
       <workItem from="1558409983217" duration="152000" />
       <workItem from="1558410180239" duration="2882000" />
-      <workItem from="1558442233063" duration="4651000" />
+      <workItem from="1558442233063" duration="9957000" />
     </task>
     <task id="LOCAL-00001" summary="added spatial lags and moran plots for DAs">
       <created>1558410851397</created>
@@ -181,11 +133,18 @@
       <option name="project" value="LOCAL" />
       <updated>1558410897629</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added map_lisa">
+      <created>1558508442933</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1558508442933</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38230000" />
+    <option name="totallyTimeSpent" value="43536000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1024" height="768" extended-state="6" />
@@ -223,64 +182,22 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added spatial lags and moran plots for DAs" />
     <MESSAGE value="generated by PyCharm" />
-    <option name="LAST_COMMIT_MESSAGE" value="generated by PyCharm" />
+    <MESSAGE value="added map_lisa" />
+    <option name="LAST_COMMIT_MESSAGE" value="added map_lisa" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/parking_Toronto.ipynb">
       <provider selected="true" editor-type-id="jupyter-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/my_functions_geo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="85" selection-start-line="10" selection-end-line="85" />
-          <folding>
-            <element signature="e#616#3090#0" />
-            <element signature="e#598#1459#1" />
-            <element signature="e#2514#2693#0" />
-            <element signature="e#311#3470#0" />
-            <element signature="e#311#1284#1" />
-            <element signature="e#1733#1876#0" />
-            <element signature="e#1895#2048#0" />
-            <element signature="e#3641#7313#0" />
-            <element signature="e#3641#5332#1" />
-            <element signature="e#5614#5985#0" />
-            <element signature="e#5654#5801#0" />
-            <element signature="e#5828#5985#0" />
-            <element signature="e#6455#6565#0" />
-            <element signature="e#7526#13071#0" />
-            <element signature="e#7526#9893#1" />
-            <element signature="e#9983#10031#0" />
-            <element signature="e#10555#10700#0" />
-            <element signature="e#11417#11462#0" />
-            <element signature="e#12748#13071#0" />
-            <element signature="e#13247#17131#0" />
-            <element signature="e#13247#15017#1" />
-            <element signature="e#15406#16051#0" />
-            <element signature="e#15700#15850#0" />
-            <element signature="e#16151#16798#0" />
-            <element signature="e#16445#16597#0" />
-            <element signature="e#17297#21754#0" />
-            <element signature="e#17297#19378#1" />
-            <element signature="e#20193#20265#0" />
-            <element signature="e#21475#21660#0" />
-            <element signature="e#21907#28371#0" />
-            <element signature="e#21907#25428#1" />
-            <element signature="e#25809#25861#0" />
-            <element signature="e#26781#27542#0" />
-            <element signature="e#26943#27221#0" />
-            <element signature="e#27563#28143#0" />
-            <element signature="e#27731#27941#0" />
-            <element signature="e#28171#28299#0" />
-            <element signature="e#28434#30495#0" />
-            <element signature="e#28434#29371#1" />
-            <element signature="e#30535#31353#0" />
-            <element signature="e#30535#30852#1" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/new_workflow.ipynb">
       <provider selected="true" editor-type-id="jupyter-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my_functions_geo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="41" column="42" selection-start-line="41" selection-start-column="42" selection-end-line="41" selection-end-column="42" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
