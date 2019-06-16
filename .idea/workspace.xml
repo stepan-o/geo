@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d2f1e561-d3e9-4fa1-9428-54a6f64ce176" name="Default Changelist" comment="Merge branch 'master' of https://github.com/stepan-o/geo&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;create_da_table.ipynb">
-      <change afterPath="$PROJECT_DIR$/Teranet_GTHA_GIS_no_nan.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Teranet_GTHA_GIS_with_nan.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Teranet_meeting_May24_2019.pptx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/create_da_table.ipynb" beforeDir="false" />
-    </list>
+    <list default="true" id="d2f1e561-d3e9-4fa1-9428-54a6f64ce176" name="Default Changelist" comment="Merge branch 'master' of https://github.com/stepan-o/geo&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;create_da_table.ipynb" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,7 +20,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="x" value="10" />
     <option name="y" value="20" />
     <option name="width" value="1004" />
@@ -79,10 +72,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1150000" />
+    <option name="totallyTimeSpent" value="1635000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1040" height="744" extended-state="6" />
+    <frame x="0" y="0" width="1024" height="768" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2857143" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -98,7 +91,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32991204" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5020408" side_tool="true" weight="0.32991204" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32820514" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.28152493" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32991204" />
       <window_info anchor="bottom" id="Jupyter" order="13" sideWeight="0.4979592" weight="0.28152493" />
       <window_info anchor="right" x="0" y="0" width="206" height="568" id="Documentation" side_tool="true" weight="0.32959184" />
