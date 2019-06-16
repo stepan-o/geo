@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49140d37-a20a-4d23-887b-bfdbe0dc31a8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/create_da_table-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/create_da_table-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Teranet_GTHA_DA_spatial_join.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Teranet_GTHA_DA_spatial_join.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/create_da_table.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/create_da_table.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,14 +18,19 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/my_functions_geo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3197">
+            <state relative-caret-position="3336">
               <caret line="146" column="42" selection-start-line="146" selection-start-column="42" selection-end-line="146" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/create_da_table.ipynb">
+          <provider selected="true" editor-type-id="jupyter-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Teranet_GTHA_DA_spatial_join.ipynb">
           <provider selected="true" editor-type-id="jupyter-editor" />
         </entry>
       </file>
@@ -49,6 +57,11 @@
               <item name="geo" type="b2602c69:ProjectViewProjectNode" />
               <item name="geo" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="geo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="geo" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -59,6 +72,9 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -72,6 +88,30 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="geo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -83,17 +123,26 @@
       <option name="presentableId" value="Default" />
       <updated>1558638541767</updated>
       <workItem from="1558638550788" duration="866000" />
+      <workItem from="1560630192570" duration="5419000" />
     </task>
+    <task id="LOCAL-00001" summary="Teranet data cleanup workflow v0.9">
+      <created>1560654696798</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1560654696798</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="955000" />
+    <option name="totallyTimeSpent" value="6374000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1024" height="768" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27959183" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2857143" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -108,8 +157,9 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5020408" side_tool="true" weight="0.32991204" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.28152493" />
-      <window_info anchor="bottom" id="Python Console" order="12" />
-      <window_info anchor="bottom" id="Jupyter" order="13" sideWeight="0.4979592" visible="true" weight="0.28152493" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32991204" />
+      <window_info active="true" anchor="bottom" id="Jupyter" order="13" sideWeight="0.4979592" visible="true" weight="0.28152493" />
+      <window_info anchor="right" x="0" y="0" width="206" height="568" id="Documentation" side_tool="true" weight="0.32959184" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -122,15 +172,25 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Teranet data cleanup workflow v0.9" />
+    <option name="LAST_COMMIT_MESSAGE" value="Teranet data cleanup workflow v0.9" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/my_functions_geo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3197">
+        <state relative-caret-position="3336">
           <caret line="146" column="42" selection-start-line="146" selection-start-column="42" selection-end-line="146" selection-end-column="42" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Teranet_data_cleaning.ipynb">
+      <provider selected="true" editor-type-id="jupyter-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/create_da_table.ipynb">
+      <provider selected="true" editor-type-id="jupyter-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Teranet_GTHA_DA_spatial_join.ipynb">
       <provider selected="true" editor-type-id="jupyter-editor" />
     </entry>
   </component>
