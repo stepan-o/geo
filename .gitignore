@@ -17,3 +17,5 @@ data/da_teranet_1yr_1990_2017.geojson/da_teranet_1yr_1990_2017.shx
 data/da_teranet_1yr_1990_2017.csv
 data/da_teranet_1990_2017.csv
 .idea/workspace.xml
+data/HHSaleHistory_cleaned_v0.9_GTHA_DA_with_cols_v0.9.csv
+notebooks/.ipynb_checkpoints/
