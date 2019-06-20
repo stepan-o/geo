@@ -131,7 +131,7 @@ def map_subset(gdf_to_plot, plot_focus_ids,
     if zoom_center:
         x_zoom, y_zoom = zoom_center
         axis.set_xlim(x_zoom - zoom_radius, x_zoom + zoom_radius)
-        axis.set_ylim(y_zoom - zoom_radius, x_zoom + zoom_radius)
+        axis.set_ylim(y_zoom - zoom_radius, y_zoom + zoom_radius)
 
     # noinspection PyTypeChecker
     ctx.add_basemap(ax=axis,
