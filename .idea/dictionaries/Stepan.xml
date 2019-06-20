@@ -4,6 +4,7 @@
       <w>barh</w>
       <w>choropleth</w>
       <w>classi</w>
+      <w>cmap</w>
       <w>coef</w>
       <w>csdname</w>
       <w>daid</w>
@@ -31,6 +32,7 @@
       <w>subsetting</w>
       <w>teranet</w>
       <w>thgo</w>
+      <w>viridis</w>
       <w>xlabel</w>
       <w>ylabel</w>
     </words>
