@@ -99,7 +99,7 @@ def plot_subset(df_full, plot_focus_id, focus_col, x_col, y_col1,
 
 
 def map_subset(gdf_to_plot, plot_focus_ids,
-               color_col=None, plot_alpha=0.01,
+               color_col=None, cmap='viridis', plot_alpha=0.01,
                plot_title="", title_font_size=18,
                zoom_center=None, zoom_radius=None):
     """
@@ -110,6 +110,9 @@ def map_subset(gdf_to_plot, plot_focus_ids,
         ids to be mapped, used to generate subset of GeoDataFrame
     :param color_col: string
         column to use to color points
+    :param cmap: string
+        Matplotlib color map to be used to color points
+        default: 'viridis'
     :param plot_alpha: float
         transparency of the points to be plotted
     :param plot_title:
@@ -126,7 +129,7 @@ def map_subset(gdf_to_plot, plot_focus_ids,
     # plot results
     fig, axis = plt.subplots(1, figsize=(12, 12))
     gdf_to_plot.loc[plot_focus_ids].to_crs(epsg=3857) \
-        .plot(column=color_col, legend=True,
+        .plot(column=color_col, cmap=cmap, legend=True,
               ax=axis, alpha=plot_alpha)
     if zoom_center:
         x_zoom, y_zoom = zoom_center
