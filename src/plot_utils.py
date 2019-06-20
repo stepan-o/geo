@@ -144,7 +144,7 @@ def get_plot_title(counts, minrecords, id_lab):
         title of the plot
     """
     unique_ids = counts[counts > minrecords].index
-    title = "{0}s with > {1} Teranet records" \
+    title = "{0}s with > {1:,} Teranet records" \
                 .format(id_lab, minrecords) + \
             "\n{0:,} {1}s ({2:.5f}% of the total)" \
                 .format(len(unique_ids),
