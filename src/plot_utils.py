@@ -100,7 +100,8 @@ def plot_subset(df_full, plot_focus_id, focus_col, x_col, y_col1,
 
 def map_subset(gdf_to_plot, plot_focus_ids,
                color_col=None, plot_alpha=0.01,
-               plot_title="", title_font_size=18):
+               plot_title="", title_font_size=18,
+               zoom_center=None, zoom_radius=None):
     """
     map a subset from a GeoDataFrame
     :param gdf_to_plot: geopandas GeoDataFrame
@@ -115,6 +116,11 @@ def map_subset(gdf_to_plot, plot_focus_ids,
         title to use for the map
     :param title_font_size:
         fontsize of the title
+    :param zoom_center: tuple (int, int)
+        central point of the zoom in CRS EPSG:3857 (Web Merkator projection, metres)
+    :param zoom_radius: int or float
+        radius of the zoom (x_min = zoom_center - radius, etc.)
+        in meters (as per EPSG:3857)
     :return:
     """
     # plot results
@@ -122,6 +128,11 @@ def map_subset(gdf_to_plot, plot_focus_ids,
     gdf_to_plot.loc[plot_focus_ids].to_crs(epsg=3857) \
         .plot(column=color_col, legend=True,
               ax=axis, alpha=plot_alpha)
+    if zoom_center:
+        x_zoom, y_zoom = zoom_center
+        axis.set_xlim(x_zoom - zoom_radius, x_zoom + zoom_radius)
+        axis.set_ylim(y_zoom - zoom_radius, x_zoom + zoom_radius)
+
     # noinspection PyTypeChecker
     ctx.add_basemap(ax=axis,
                     url=ctx.sources.ST_TONER_HYBRID,
