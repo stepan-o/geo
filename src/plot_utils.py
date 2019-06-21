@@ -1,11 +1,12 @@
 import contextily as ctx
 import matplotlib.pyplot as plt
+import pandas as pd
 
 
 def plot_subset(df_full, plot_focus_id, focus_col, x_col, y_col1,
                 format_axes=True, y_col2=None,
                 p_x_label="x", p_y1_label="y1", p_y2_label="y2",
-                get_address=True, return_subset=False):
+                get_address=True, return_subset=False, x_min=None, x_max=None, date=True):
     """
     Creates a subset from a provided DataFrame using parameters
     `plot_focus_id` to subset `focus_col` of the DataFrame `df_full`.
@@ -38,6 +39,13 @@ def plot_subset(df_full, plot_focus_id, focus_col, x_col, y_col1,
     :param return_subset: boolean
         whether to return the subset, address, and x y
         (default=False)
+    :param x_min: int or string (must match x axis index)
+        limit to be used on x axis
+    :param x_max: int or string (must match x axis index)
+        limit to be used on x axis
+    :param date: boolean
+        whether x is datetime indexed (needed for setting x lim)
+        (default=True)
     :return: default: None, plots a chart
              optional:
                 plot_subset: pandas DataFrame
@@ -108,6 +116,22 @@ def plot_subset(df_full, plot_focus_id, focus_col, x_col, y_col1,
         axis2.legend(loc='center left')
         axis2.set_ylabel(p_y2_label)
 
+    # set limits on x axis
+    if x_min and x_max:
+        if date:
+            axis.set_xlim(left=pd.to_datetime(x_min), right=pd.to_datetime(x_max))
+        else:
+            axis.set_xlim(left=x_min, right=x_max)
+    elif x_min:
+        if date:
+            axis.set_xlim(left=pd.to_datetime(x_min))
+        else:
+            axis.set_xlim(left=x_min)
+    elif x_max:
+        if date:
+            axis.set_xlim(right=pd.to_datetime(x_max))
+        else:
+            axis.set_xlim(right=x_max)
     plt.show()
 
     if return_subset:
