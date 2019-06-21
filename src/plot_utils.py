@@ -51,11 +51,27 @@ def plot_subset(df_full, plot_focus_id, focus_col, x_col, y_col1,
     subset_to_plot = df_full[df_full[focus_col] == plot_focus_id]
     if get_address:
         # get the address
+        try:
+            street_number = subset_to_plot['street_number'].mode()[0]
+        except IndexError:
+            street_number = ""
+        try:
+            street_name = subset_to_plot['street_name'].mode()[0]
+        except IndexError:
+            street_name = ""
+        try:
+            street_designation = subset_to_plot['street_designation'].mode()[0]
+        except IndexError:
+            street_designation = ""
+        try:
+            municipality = subset_to_plot['municipality'].mode()[0]
+        except IndexError:
+            municipality = ""
         address = "{0} {1} {2}, {3}" \
-            .format(subset_to_plot['street_number'].mode()[0],
-                    subset_to_plot['street_name'].mode()[0],
-                    subset_to_plot['street_designation'].mode()[0],
-                    subset_to_plot['municipality'].mode()[0])
+            .format(street_number,
+                    street_name,
+                    street_designation,
+                    municipality)
         x = subset_to_plot['x'].mode()[0]
         y = subset_to_plot['y'].mode()[0]
     else:
