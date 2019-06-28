@@ -22,3 +22,8 @@ notebooks/.ipynb_checkpoints/
 notebooks/feature_extraction/.ipynb_checkpoints/
 src/__pycache__/
 notebooks/EDA/.ipynb_checkpoints/
+data/Teranet_1970_585.csv
+data/Teranet_1990_70662.csv
+data/Teranet_2017_153126.csv
+presentations/~$Teranet_meeting_Jun21_2019.pptx
+presentations/~$Teranet_meeting_May24_2019.pptx
