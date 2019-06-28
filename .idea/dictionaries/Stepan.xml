@@ -11,6 +11,7 @@
       <w>dauid</w>
       <w>dissimination</w>
       <w>dtype</w>
+      <w>edelsbrunner</w>
       <w>eglinton</w>
       <w>ellps</w>
       <w>figsize</w>
@@ -31,6 +32,7 @@
       <w>proj</w>
       <w>quantiles</w>
       <w>rugplot</w>
+      <w>seidel</w>
       <w>shapefile</w>
       <w>sjoin</w>
       <w>stouffville</w>
@@ -39,6 +41,7 @@
       <w>thgo</w>
       <w>viridis</w>
       <w>whitchurch</w>
+      <w>wikipedia</w>
       <w>xlabel</w>
       <w>ylabel</w>
     </words>
