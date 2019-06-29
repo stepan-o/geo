@@ -303,3 +303,4 @@ def map_alpha(gdf, start, stop,
     alpha = alpha.to_crs(epsg=3857)
     plot_map(cont=False, act=action)
     plot_map(cont=True, act=action)
+    return dfd
