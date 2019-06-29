@@ -1,7 +1,7 @@
 import contextily as ctx
+import geopandas as gpd
 import matplotlib.pyplot as plt
 import pandas as pd
-import geopandas as gpd
 from pysal.lib.cg import alpha_shape_auto
 
 
@@ -213,7 +213,7 @@ def get_plot_title(counts, minrecords, id_lab):
 def map_alpha(gdf, start, stop,
               color_col, idx_col, min_counts,
               dfd=None, action='show',
-              x_col='x', y_col='y',
+              x_col='x', y_col='y', crs='+init=epsg:4326',
               save_path_noctx='img/gen/noctx/',
               save_path_ctx='img/gen/ctx/',
               set_fixed_limits=True,
@@ -225,11 +225,16 @@ def map_alpha(gdf, start, stop,
     :param stop:
     :param color_col:
     :param idx_col:
-    :param dfd:
     :param min_counts:
+    :param dfd:
     :param action:
+    :param x_col:
+    :param y_col:
+    :param crs:
     :param save_path_noctx:
     :param save_path_ctx:
+    :param set_fixed_limits:
+    :param record_counts:
     :return:
     """
     def plot_map(cont, act):
@@ -292,9 +297,9 @@ def map_alpha(gdf, start, stop,
         list(group_counts[group_counts > min_counts].index)
     mask = s[color_col].isin(plot_list)
     s = s[mask]
-    alpha = s.groupby(color_col)[['x', 'y']] \
+    alpha = s.groupby(color_col)[[x_col, y_col]] \
         .apply(lambda tab: alpha_shape_auto(tab.values))
-    alpha = gpd.GeoDataFrame({'geometry': alpha}, crs='+init=epsg:4326')
+    alpha = gpd.GeoDataFrame({'geometry': alpha}, crs=crs)
     alpha = alpha.to_crs(epsg=3857)
     plot_map(cont=False, act=action)
     plot_map(cont=True, act=action)
