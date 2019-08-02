@@ -22,7 +22,7 @@
     \maketitle
 
     \begin{abstract}
-        A relational database models real life entities, such as NHL players and NHL teams, by storing them in tables.
+        A relational database models real life entities, such as universities and university professors, by storing them in tables.
         The idea of a database is to push data into a certain structure \textemdash a pre-defined model \textemdash where you can enforce data types, relationships, and other rules.
         Each table must contain data from a single entity type.
         This reduces redundancy by storing entities only once.
@@ -32,11 +32,11 @@
 
     \section{Relational Database} \label{sec:rdb}
 
-    A relational database models real life entities, such as NHL players and NHL teams, by storing them in tables.
-    Each table must contain data from a single entity type (\textit{e.g.}, NHL Players, NHL teams, \textit{etc.})
-    This reduces redundancy by storing entities only once \textemdash for example, there only needs to be one row of data containing details of a certain NHL team.
+    A relational database models real life entities, such as universities, organizations, and university professors, by storing them in tables.
+    Each table must contain data from a single entity type (\textit{e.g.}, universities, organizations, university professors, \textit{etc.})
+    This reduces redundancy by storing entities only once \textemdash for example, there only needs to be one row of data containing details of a certain university.
     Lastly, a database can be used to model relationships between entities.
-    For instance, an NHL player could have played for multiple NHL teams, while an NHL team includes many NHL players on their roster.
+    For instance, a professor could be involved with multiple organizations within a university, while an organization may include many professors.
 
     An example of data organized with redundancy in attributes and without redundancy is presented in the two entity-relationship diagrams on figure~\ref{fig:ent_rel_diag}.
     The diagram on the left (fig.\ref{fig:with_redun}) models only one entity type \textemdash \texttt{university\_professors}.
