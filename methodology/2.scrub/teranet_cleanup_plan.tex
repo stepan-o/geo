@@ -9,23 +9,28 @@
 % Document
 \begin{document}
 
-    \title{OSEMN methodology \\
+    \title{GTHA housing market database \\
+    OSEMN methodology \\
     Step 2: Scrub (clean) data \\
-    Cleanup plan for Teranet dataset}
+    Cleanup plan for the Teranet dataset}
 
     \author{Stepan Oskin}
 
     \maketitle
 
     \begin{abstract}
-        This document outlines the cleanup plan for the Teranet dataset.
-        The four main steps of the cleanup process include: spatial join of Teranet points with Dissemination Area polygons, correction of inconsistent entries, addition of new attributes, and removal of duplicated transactions.
-        Additional steps may include: filtering transactions for low and high outliers based on the values of \texttt{consideration\_amt}, and correction of \texttt{consideration\_amt} for inflation to ensure consistency of dollar values across time.
+        Teranet dataset plays an integral part in the proposed GTHA housing market database, design and implementation of which is the primary focus of this Master Thesis.
+        In order to allow the implementation of constraints dictated by the database design, as well as for facilitation of future analysis and modelling based on the database information, it is critical to ensure particular structure and certain degree of consistency of the input data.
+        To address this issue, this document outlines the cleanup plan for the Teranet dataset.
+
+        The four main steps of the cleanup process include: spatial join of Teranet points with the polygons of Dissemination Areas, correction of inconsistent entries, addition of new attributes, and removal of duplicated transactions.
+        Additional steps may include: filtering transactions for low and high outliers based on the values of \texttt{consideration\_amt}, correction of \texttt{consideration\_amt} for inflation to ensure consistency of dollar values across time, and normalization of values in \texttt{consideration\_amt}.
     \end{abstract}
 
     \section{Introduction} \label{sec:teranet_cleaning_intro}
 
-    For description of OSEMN methodology for data science projects, see \\ \texttt{methodology/0.osemn/osemn.pdf}.
+    This document presents \textit{Step 2: Scrub} of OSEMN methodology for data science projects.
+    For detailed description of OSEMN methodology, see \\ \texttt{methodology/0.osemn/osemn.pdf}.
 
     \vspace{5mm}
 
@@ -33,21 +38,21 @@
 
     \vspace{5mm}
 
-    As outlined in \textit{Step 2: Scrub (clean) data} of OSEMN methodology (see \texttt{methodology/2.scrub/scrub.pdf} for details), data analytics, statistical models, and machine learning algorithms, in order to produce meaningful results, require input data to be consistent and transformed into appropriate form.
+    As outlined in the document \textit{Step 2: Scrub (clean) data} (see \\ \texttt{methodology/2.scrub/scrub.pdf} for details), data analytics, statistical models, and machine learning algorithms, in order to produce meaningful results, require input data to be consistent and transformed into an appropriate form.
 
     In addition to that, as outlined in the \textit{Description of Relational Databases} (see \texttt{methodology/rdbms/rdbms.pdf} for details), the main idea of a database is to force the data into a certain structure to allow implementation of constraints and relationships between entities.
-    Organizing data in such a way allows for reduction of redundancy in data storage and improvement of efficiency in working with related datasets.
+    Organizing data in such a way allows for reduction of redundancy in data storage and drastic improvement in efficiency when working with related datasets.
     Thus, input data for a relational database also needs to be consistent in order for constraints and relations to work properly.
 
-    Data also needs to follow the ''tidy'' format, as described in section~\ref{sec:db_norm_tidy_data}.
-    Teranet dataset is tidy in its structure, but does have multiple issues with its consistency, such as inconsistent spelling, missing and erratic values, and duplicate records.
-    This document describes the steps taken to address these issues and improve the quality and usability of Teranet dataset, and to meet the requirements needed for the organization of the proposed Teranet database.
+    Data also needs to follow the ''tidy'' format, as described in section~\ref{sec:db_norm_tidy_data} of this document.
+    Teranet dataset is ''tidy'' in its structure, but does have multiple issues with its consistency, such as inconsistent spelling, missing and erratic values, and duplicate records.
+    This document describes the steps taken to address these issues, improve the quality and usability of the Teranet dataset, and to meet the requirements needed for the organization of the proposed GTHA housing market database via PostgreSQL .
 
     \section{Cleanup plan for the Teranet dataset} \label{sec:teranet_cleanup_plan}
 
     The four main steps of the cleanup process of the Teranet dataset include:
     \begin{itemize}
-        \item Step 2.1: spatial join of Teranet points with Dissemination Area (DA) polygons
+        \item Step 2.1: spatial join of Teranet points with the polygons of Dissemination Areas (DAs)
         \item Step 2.2: correction of inconsistent entries
         \item Step 2.3: addition of new attributes: \texttt{year}, \texttt{decade}, and \texttt{transaction\_id}
         \item Step 2.4: removal of duplicate records from the Teranet dataset
@@ -59,6 +64,7 @@
     \begin{itemize}
         \item filtering Teranet transactions for low and high outliers based on the values of \texttt{consideration\_amt}
         \item correction of \texttt{consideration\_amt} for inflation to ensure consistency of dollar values across time
+        \item normalization of values for \texttt{consideration\_amt}
     \end{itemize}
 
     \section{Tidy data and database normalization} \label{sec:db_norm_tidy_data}
@@ -92,16 +98,16 @@
 
     \subsection{Teranet dataset in the context of a normalized database} \label{subsec:teranet_db_norm}
 
-    Teranet dataset is intended to be used as one of the tables of the proposed housing database that would include other sources of information, such as neighbourhood demographics, building types and coordinates, \textit{etc.}
+    Teranet dataset is intended to be used as one of the tables (relations) of the proposed GTHA housing market database that would include other sources of information, such as DA-level demographics, land use information, \textit{etc.}
     In this context, Codd's basic normalization ideas would take the following form:
 
     \begin{enumerate}
         \item The Teranet dataset presents a single type of object (relation, or table) \textemdash real estate transactions recorded in the Province of Ontario between 1805-01-06 and 2017-10-11.
         \item Every distinct object (transaction) must have an instance identifier that is unique within the object type, or its primary-key value.
-        In case of Teranet dataset, all the native columns, including \texttt{registration\_date}, \texttt{pin}, address information, and \texttt{X} and \texttt{Y} coordinates, have duplicated values present (multiple transactions occurring on the same date, address, coordinates, or under the same pin.
-        Thus, no combination of such columns constitute a candidate key, which prompts the addition of a new column that can serve as a unique identifier for Teranet records.
+        In case of Teranet dataset, all the native columns, including \texttt{registration\_date}, \texttt{pin}, address information, and \texttt{X} and \texttt{Y} coordinates, have duplicated values present (multiple transactions occurring on the same date, address, coordinates, or under the same pin).
+        Thus, no combination of such columns constitute a candidate key, which prompts the addition of a new attribute that can serve as a unique identifier for Teranet records.
         \item A new column \texttt{transaction\_id} is added to the dataset to be used as its primary key;
-        it corresponds to the row number of each instance (transaction) in the Teranet dataset (filtered to include only GTHA transactions via a spatial join, see section~\ref{sec:teranet_da_spatial_join}), ordered from the earliest date to the latest.
+        it corresponds to the row number of each instance (transaction) in the Teranet dataset (filtered to include only GTHA transactions via a spatial join in Step 2.1, see section~\ref{sec:teranet_da_spatial_join} of this document), ordered from the earliest date to the latest.
         \item Every fact in the database is a fact about the object identified by the primary key.
         This condition is met, as every transaction in Teranet dataset is described by the values found in columns of a single row.
         \item Each such fact contains nothing other than the single-valued immediate properties of the object, all columns in Teranet dataset contain single-valued immediate properties of each transaction.
@@ -144,7 +150,7 @@
 
     \section{Step 2.1: Spatial join of Teranet points with Dissemination Area polygons} \label{sec:teranet_da_spatial_join}
 
-    Step 2.1 of the cleaning process of Teranet data involved the spatial join of Teranet points with Dissemination Area (DA) polygons.
+    Step 2.1 of the cleaning process of Teranet data involved the spatial join of Teranet points with the polygons of Dissemination Areas (DA).
     Parameters that were used for the spatial join operation were \texttt{how='inner', op='within'}.
 
     The spatial join was performed to filter out Teranet records whose coordinates fall outside of GTHA .
@@ -161,18 +167,101 @@
 
     Step 2.2 of the cleanup process for Teranet data focused on the correction of inconsistent entries.
 
-    \vspace{5mm}
+    \subsection{Common problems with data} \label{subsec:common_data_problems}
+    Common problems with data may include:
 
-    The following modifications have been made to the dataset:
-
-    Inconsistent capitalizations were fixed for
     \begin{itemize}
-        \item column names
-        \item column \texttt{municipality}
-        \item \texttt{street\_name}
-        \item \texttt{street\_designation}
-        \item values in the column \texttt{postal\_code} did not show any problems, but were converted to upper case as a preventive measure
+        \item Inconsistent column names \\
+        Column names can have inconsistent capitalizations and/or bad characters.
+        \item Missing data \\
+        Missing data needs to be identified and addressed.
+        \item Outliers \\
+        Outliers can pose a potential problem and need to be investigated.
+        \item Duplicate rows \\
+        Duplicate rows can bias analysis and need to be found and dropped.
+        \item Untidy \\
+        Untidy datasets can contain multiple problems, and prevent us from quickly transforming our dataset from one suitable for reporting to a dataset suitable for analysis.
+        \item Need to process columns \\
+        Columns might need to be processed before they can be used for data analysis.
+        \item Column types can signal unexpected data values \\
+        Column types can signal the presence of unexpected data values.
     \end{itemize}
+
+    \subsection{Modifications made to Teranet dataset} \label{subsec:teranet_modifications}
+
+    The following modifications have been made to the Teranet dataset:
+
+    \begin{enumerate}
+        \item Inconsistent capitalizations were fixed for:
+        \begin{itemize}
+            \item column names
+            \item column \texttt{municipality}
+            \item column \texttt{street\_name}
+            \item column \texttt{street\_designation}
+            \item values in the column \texttt{postal\_code} did not show any problems, but were converted to upper case as a preventive measure
+        \end{itemize}
+        \item Column \texttt{province} was removed from the Teranet dataset, as all the transaction are recorded in the Province of Ontario
+        \item One erratic value was fixed in column \texttt{registration\_date}
+    \end{enumerate}
+
+    \subsubsection{Improper capitalizations} \label{subsubsec:teranet_capitalizations}
+
+    \begin{itemize}
+        \item Column names have inconsistent capitalizations.
+        \item Values in columns \texttt{street\_name}, \texttt{street\_designation} and \texttt{municipality} have inconsistent capitalizations.
+        \item Values in column \texttt{postal\_code} do not show problems, but have been converted to upper case as a preventive measure.
+    \end{itemize}
+
+    \subsubsection{Data types} \label{subsubsec:teranet_data_types}
+
+    The only column was read with a wrong data type is \texttt{registration\_date} (read as Python \texttt{object}, which in Pandas usually refers to \texttt{string}, instead of \texttt{datetime}).
+    This happened due to one erratic entry being present in column \texttt{registration\_date}, which was fixed during Step 2.2 of the cleanup process.
+
+    After the erratic value was fixed, \texttt{registration\_date} can be converted to \texttt{date} data type and can be used as one of the indices for Teranet records (however, its values are not unique, as multiple transactions can occur on the same day).
+
+    Data types for the rest of the columns are detected appropriately, indicating consistency of data types in the Teranet dataset.
+
+    Column \texttt{lro\_num} can be converted to \texttt{category} data type, as it contains only a small range of values.
+    But since this conversion does not result in significant memory savings, its type was left as \texttt{integer}.
+
+    \subsubsection{Missing values} \label{subsubsec:teranet_missing_values}
+
+
+    \subsubsection{Consistency of entries} \label{subsubsec:teranet_consistency}
+
+    \begin{enumerate}
+        \item \texttt{lro\_num} \textemdash consistent.
+        No changes were made.
+        \item \texttt{pin} \textemdash non-unique, but consistent.
+        Unique \texttt{pin}s might or might not correspond to unique coordinate pairs (same coordinate pair can correspond to multiple unique \texttt{pin}s).
+        No changes were made.
+        \item \texttt{consideration\_amt} \textemdash consistent, but a large number of transactions have very low values of \texttt{consideration\_amt}, which appear to represent true recorded values (\textit{e.g.,} gift transactions).
+        Also, outliers with very large \texttt{consideration\_amt} are present in the dataset, which also appear to represent true recorded values and correspond to high-value transactions of commercial property.
+        \item \texttt{registration\_date} \textemdash consistent, one erratic entry was fixed in Step 2.2.
+        \item \texttt{postal\_code} \textemdash consistent, converted to upper case as a preventive measure.
+        Non-null values match the correct format for Canadian postal codes.
+        \item \texttt{province} \textemdash consistent, removed from the Teranet dataset, as all the transactions are recorded in the Province of Ontario.
+        \item \texttt{unitno} \textemdash some erratic values are present, fixed in Step 2.2.
+        \item \texttt{street\_name} \textemdash some inconsistent values are present (different spellings of street names;
+        with and without street designation;
+        unit/suite number/postal code included;
+        ''Highway'' or ''Hwy''; \textit{etc.}).
+        Correcting all the values presents a time-intensive task, and thus was left for future targeted correction, capitalization were fixed in Step 2.2.
+        \item \texttt{street\_designation} \textemdash some inconsistent values are present (\textit{e.g.,} ''St'', ''St W'', ''St.'', or ''Street''), most common problems were fixed in Step 2.2, capitalization were also fixed in Step 2.2.
+        \item \texttt{street\_direction} \textemdash some inconsistent values are present (\textit{e.g.,} ''S'' and ''SOUTH''), fixed in Step 2.2.
+        \item \texttt{municipality} \textemdash some inconsistent values are present (\textit{e.g.,} ''North York'' and ''North York/Toronto'', ''Hamilton'' and ''Hamilton City''), fixed in Step 2.2, capitalization were also fixed in Step 2.2.
+        \item \texttt{street\_suffix} \textemdash all values are numeric, but consistent, very few values are non-null.
+        As all the values are numeric, it is unclear how do they represent street suffix.
+        \item \texttt{street\_number} \textemdash consistent, but some of the values are questionably large to represent a street number (\textit{e.g.,} 562916, 47626).
+        \item \texttt{x} and \texttt{y} \textemdash consistent.
+        Values appear to be in a reasonable range, but some coordinates clearly do not match the address/municipality, where the transaction is supposed to be recorded.
+        However, majority of coordinate pairs appear to be reasonable.
+
+        Records with coordinates that fall outside of the GTHA boundary, as specified by the geometry of the polygons of the GTHA Dissemination Areas, have been filtered out of the Teranet dataset via a spatial join in Step 2.1.
+        Unique coordinate pairs might or might not correspond to unique \texttt{pin}s.
+        There are more unique \texttt{pin}s than unique coordinate pairs (same coordinate pair can correspond to multiple unique \texttt{pin}s).
+        No changes were made.
+    \end{enumerate}
 
     \section{Step 2.3: Addition of new attributes} \label{sec:teranet_new_cols}
 
@@ -180,7 +269,7 @@
 
     \vspace{5mm}
 
-    Two new attributes parsed from \texttt{registration\_date} for grouping and visualization purposes
+    Two new attributes were parsed from the values of \texttt{registration\_date} for grouping and visualization purposes:
     \begin{itemize}
         \item \texttt{year}
         \item \texttt{decade}
@@ -193,6 +282,7 @@
         \item No combination of native columns provides a convenient unique identification for Teranet records
         \item \texttt{pin}, \texttt{registration\_date}, \texttt{consideration\_amt}, \texttt{X} and \texttt{Y} coordinates, and other columns all have duplicate entries, and thus do not qualify as candidate keys
         \item A new column \texttt{transaction\_id} with a simple auto-incrementing range index (row number) will be added to provide a unique identifier for each Teranet record
+        \item The new column \texttt{transaction\_id} captures the order of transactions in the Teranet dataset, previously filtered to include only transactions with coordinates that fall within the GTHA boundary (see Step 2.1), and ordered from earliest to latest \texttt{registration\_date}.
         \item The new column \texttt{transaction\_id} can be used as a Primary Key for Teranet table within the proposed Teranet database, and thus allows to take advantage of the indexing features available in PostgreSQL
     \end{itemize}
 
