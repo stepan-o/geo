@@ -215,7 +215,12 @@
 
     \subsubsection{Data types} \label{subsubsec:teranet_data_types}
 
-    Data types of all columns are detected appropriately, indicating consistency of data types in the Teranet dataset.
+    Data type of column \texttt{unitno} detects as a \texttt{float}, though it should contain \texttt{integer} values.
+    This happens due to erratic values being present in column \texttt{unitno}, which is addressed in section~\ref{sec:teranet_correction_inconsistent} of this document.
+    After the erratic values are corrected, the column can be converted to \texttt{integer} data type.
+    This step is performed when Teranet data is entered into the PostgreSQL database, as Pandas library in Python does not have an efficient representation of \texttt{NaN} (missing) values for \texttt{integer} data type\cite{PandasDevelopmentCommunity2019}.
+
+    Data types of all other columns are detected appropriately, indicating consistency of data types in the Teranet dataset.
 
     Column \texttt{lro\_num} can be converted to \texttt{category} data type, as it contains only a small range of values.
     But since this conversion does not result in significant memory savings, its type was left as \texttt{integer}.
