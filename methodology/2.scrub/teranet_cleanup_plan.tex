@@ -3,6 +3,7 @@
 
 % Preamble
 \documentclass[11pt]{article}
+\usepackage{graphicx}
 
 % Packages
 
@@ -201,7 +202,7 @@
             \item values in the column \texttt{postal\_code} did not show any problems, but were converted to upper case as a preventive measure
         \end{itemize}
         \item Column \texttt{province} was removed from the Teranet dataset, as all the transaction are recorded in the Province of Ontario
-        \item One erratic value was fixed in column \texttt{registration\_date}
+        \item Column \texttt{street\_suffix} has been removed from the dataset, since it is missing 99.99994\% of values (see section~\ref{subsubsec:teranet_missing_values}).
     \end{enumerate}
 
     \subsubsection{Improper capitalizations} \label{subsubsec:teranet_capitalizations}
@@ -214,18 +215,65 @@
 
     \subsubsection{Data types} \label{subsubsec:teranet_data_types}
 
-    The only column was read with a wrong data type is \texttt{registration\_date} (read as Python \texttt{object}, which in Pandas usually refers to \texttt{string}, instead of \texttt{datetime}).
-    This happened due to one erratic entry being present in column \texttt{registration\_date}, which was fixed during Step 2.2 of the cleanup process.
-
-    After the erratic value was fixed, \texttt{registration\_date} can be converted to \texttt{date} data type and can be used as one of the indices for Teranet records (however, its values are not unique, as multiple transactions can occur on the same day).
-
-    Data types for the rest of the columns are detected appropriately, indicating consistency of data types in the Teranet dataset.
+    Data types of all columns are detected appropriately, indicating consistency of data types in the Teranet dataset.
 
     Column \texttt{lro\_num} can be converted to \texttt{category} data type, as it contains only a small range of values.
     But since this conversion does not result in significant memory savings, its type was left as \texttt{integer}.
 
     \subsubsection{Missing values} \label{subsubsec:teranet_missing_values}
 
+    Number of missing records per column in the Teranet dataset is presented in figure~\ref{fig:teranet_na_counts}.
+
+    \vspace{5mm}
+
+    The following columns have no missing values:
+
+    \begin{itemize}
+        \item \texttt{pin}
+        \item \texttt{lro\_num}
+        \item \texttt{registration\_date}
+        \item \texttt{x} and \texttt{y}
+    \end{itemize}
+
+    \vspace{5mm}
+
+    The new columns that were added via a spatial join in Step 2.1 have no missing values:
+
+    \begin{itemize}
+        \item \texttt{objectid}
+        \item \texttt{dauid}
+        \item \texttt{csdname}
+    \end{itemize}
+    \begin{figure}[hbt!]
+        \centering
+        \includegraphics[width=1\linewidth,trim=1 1 1 1,clip]{img/teranet_na_perc.png}
+        \caption{Missing values by column in the Teranet dataset (filtered to include only records with coordinates within GTHA boundary in Step 2.1).}
+        \label{fig:teranet_na_counts}
+    \end{figure}
+
+    \newpage
+
+    The following columns have most of the values present:
+
+    \begin{itemize}
+        \item \texttt{postal\_code} (8.37\% missing)
+        \item \texttt{street\_name} (3.02\% missing)
+        \item \texttt{street\_designation} (8.71\% missing)
+        \item \texttt{municipality} (0.06\% missing)
+        \item \texttt{street\_number} (3.08\% missing)
+    \end{itemize}
+
+    \vspace{5mm}
+
+    The following columns have most of the values missing:
+
+    \begin{itemize}
+        \item \texttt{unitno} (76.9\% missing)
+        \item \texttt{street\_direction} (90.4\% missing)
+        \item \texttt{street\_suffix} (99.99994\% missing)
+    \end{itemize}
+
+    Since 99.99994\% of the values are missing in the column \texttt{street\_suffix}, it has been removed from the dataset.
 
     \subsubsection{Consistency of entries} \label{subsubsec:teranet_consistency}
 
