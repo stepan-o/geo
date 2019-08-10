@@ -46,16 +46,17 @@
     Thus, input data for a relational database also needs to be consistent in order for constraints and relations to work properly.
 
     Data also needs to follow the ''tidy'' format, as described in section~\ref{sec:db_norm_tidy_data} of this document.
-    Teranet dataset is ''tidy'' in its structure, but does have multiple issues with its consistency, such as inconsistent spelling, missing and erratic values, and duplicate records.
-    This document describes the steps taken to address these issues, improve the quality and usability of the Teranet dataset, and to meet the requirements needed for the organization of the proposed GTHA housing market database via PostgreSQL .
+    Teranet dataset is mostly ''tidy'' in its structure, but does have multiple issues with its consistency, such as inconsistent spelling, multiple attributes recorded in a single column (some records have their \texttt{unitno}, \texttt{street\_number}, \texttt{postal\_code}, \texttt{street\_designation} and/or \texttt{street\_direction} recorded as parts of their \texttt{street\_name}), missing and erratic values, and duplicate records.
+    This document describes the steps taken to address these issues, in order to improve the quality and usability of the Teranet dataset, and to meet the requirements needed for the organization of the proposed GTHA housing market database via PostgreSQL .
 
     \section{Cleanup plan for the Teranet dataset} \label{sec:teranet_cleanup_plan}
 
     The four main steps of the cleanup process of the Teranet dataset include:
     \begin{itemize}
-        \item Step 2.1: spatial join of Teranet points with the polygons of Dissemination Areas (DAs)
+        \item Step 2.1: spatial join of Teranet points with the polygons of Dissemination Areas (DAs), results in addition of 3 new attributes: \texttt{objectid}, \texttt{dauid}, and \texttt{csdname}.
+        Attribute \texttt{dauid} allows the establishment of the relationship between the Teranet records and Dissemination Areas (they can be joined in the future via a non-spatial operation).
         \item Step 2.2: correction of inconsistent entries
-        \item Step 2.3: addition of new attributes: \texttt{year}, \texttt{decade}, and \texttt{transaction\_id}
+        \item Step 2.3: addition of new attributes: \texttt{transaction\_id}, \texttt{price\_disp}, \texttt{year}, and \texttt{decade}
         \item Step 2.4: removal of duplicate records from the Teranet dataset
     \end{itemize}
 
@@ -103,7 +104,7 @@
     In this context, Codd's basic normalization ideas would take the following form:
 
     \begin{enumerate}
-        \item The Teranet dataset presents a single type of object (relation, or table) \textemdash real estate transactions recorded in the Province of Ontario between 1805-01-06 and 2017-10-11.
+        \item The Teranet dataset (filtered to include only GTHA records) presents a single type of object (relation, or table) \textemdash real estate transactions recorded in the GTHA between 1805-01-06 and 2017-10-11.
         \item Every distinct object (transaction) must have an instance identifier that is unique within the object type, or its primary-key value.
         In case of Teranet dataset, all the native columns, including \texttt{registration\_date}, \texttt{pin}, address information, and \texttt{X} and \texttt{Y} coordinates, have duplicated values present (multiple transactions occurring on the same date, address, coordinates, or under the same pin).
         Thus, no combination of such columns constitute a candidate key, which prompts the addition of a new attribute that can serve as a unique identifier for Teranet records.
@@ -301,6 +302,7 @@
         ''Highway'' or ''Hwy''; \textit{etc.}).
         Correcting all the values presents a time-intensive task, and thus was left for future targeted correction, capitalization were fixed in Step 2.2.
         \item \texttt{street\_designation} \textemdash some inconsistent values are present (\textit{e.g.,} ''St'', ''St W'', ''St.'', or ''Street''), most common problems were fixed in Step 2.2, capitalization were also fixed in Step 2.2.
+        Street types were corrected in accordance to the list of recognized symbols and abbreviations provided by \textit{Canada Post}\cite{CanadaPost2019}.
         \item \texttt{street\_direction} \textemdash some inconsistent values are present (\textit{e.g.,} ''S'' and ''SOUTH''), fixed in Step 2.2.
         \item \texttt{municipality} \textemdash some inconsistent values are present (\textit{e.g.,} ''North York'' and ''North York/Toronto'', ''Hamilton'' and ''Hamilton City''), fixed in Step 2.2, capitalization were also fixed in Step 2.2.
         \item \texttt{street\_suffix} \textemdash all values are numeric, but consistent, very few values are non-null.
