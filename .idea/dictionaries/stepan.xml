@@ -6,8 +6,11 @@
       <w>codd</w>
       <w>colortbl</w>
       <w>datasets</w>
+      <w>dateparse</w>
+      <w>disp</w>
       <w>elrs</w>
       <w>healthcare</w>
+      <w>mississaug</w>
       <w>nepean</w>
       <w>omers</w>
       <w>osemn</w>
@@ -16,12 +19,17 @@
       <w>perc</w>
       <w>postgre</w>
       <w>rdbms</w>
+      <w>scon</w>
+      <w>sideroad</w>
       <w>spcls</w>
       <w>stepan</w>
+      <w>stillwater</w>
       <w>teraview</w>
       <w>unita</w>
       <w>unitno</w>
+      <w>vaugh</w>
       <w>wickham</w>
+      <w>ylist</w>
     </words>
   </dictionary>
 </component>
