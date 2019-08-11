@@ -1,8 +1,8 @@
 -- auto-generated definition
-create table teranet_nonan_new_cols
+create table teranet
 (
     transaction_id            integer not null
-        constraint teranet_nonan_new_cols_pk
+        constraint teranet_pk
             primary key,
     lro_num                   integer,
     pin                       integer,
@@ -18,15 +18,17 @@ create table teranet_nonan_new_cols
     x                         numeric,
     y                         numeric,
     objectid                  integer,
-    dauid                     integer,
+    dauid                     integer
+        constraint teranet_da_census_profiles_income_dauid_fk
+            references da_census_profiles_income,
     csdname                   varchar(22),
     street_name_raw           varchar(50),
     date_disp                 date,
-    price_disp                money,
+    price_disp                text,
     year                      integer,
-    "3year"                   char(9),
-    "5year"                   varchar(9),
-    "10year"                  varchar(9),
+    year3                     varchar(9),
+    year5                     varchar(9),
+    year10                    varchar(9),
     xy                        varchar(38),
     pin_total_sales           integer,
     xy_total_sales            integer,
@@ -49,6 +51,8 @@ create table teranet_nonan_new_cols
     xy_sale_next_3y           boolean
 );
 
-alter table teranet_nonan_new_cols
+comment on table teranet is 'Teranet dataset filtered for GTHA records with price over 10''000 CAD';
+
+alter table teranet
     owner to teranet;
 
